@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import WindowInfo from './WindowInfo';
+import Animation from './Animation'
 
-function App() {
+class App extends Component {
+  constructor(props){
+    super(props)
+    
+  }
+
+  componentDidMount(){
+    
+  }
+
+
+
+
+  render(){
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="App" style={{display:'flex',justifyContent:'center',
+    flexDirection:'column',alignItems:'center'}}>
+      <WindowInfo /> 
+      {/* <Mo/> */}
+      {/* add another listener mouse postion so when you move your mose show X and Y 
+      coordinates is will be sammer in window state */}
+      {/* <Animation width ={600} height ={600}/> */}
+      {/* passing props that will be used in styling */}
     </div>
   );
-}
+}}
 
 export default App;
